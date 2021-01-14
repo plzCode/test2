@@ -1,0 +1,24 @@
+//참가자와 완수자를 비교해서 미완수자를 출력해야함
+//완수자는 항상 참가자 - 1명임
+//동명이인의 예외처리가 부족함
+public String solution(String[] part, String[] comp) {
+        String answer = "";
+        int count = 0;
+
+        for(int i = 0; i<part.length; i++){
+            for(int j = 0; j<comp.length; j++){
+                if(!part[i].equals(comp[j])){
+                    count++;
+                }
+
+            }
+          if(count == comp.length){
+             answer = part[i];
+             break;
+        }
+          count = 0;
+
+
+    }
+        return answer;
+}
